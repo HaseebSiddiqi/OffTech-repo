@@ -113,7 +113,7 @@ const HeroNew = ({
                         wide={"100%"}
                         href="https://cruip.com/"
                       >
-                        Sign Up
+                        View Demo
                       </Button>
                     </ButtonGroup>
                   </div>
