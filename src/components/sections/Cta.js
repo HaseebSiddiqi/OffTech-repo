@@ -64,7 +64,7 @@ const Cta = ({
             </Input>
           </div>
           <div className="cta-slogan">
-            <h3 className="m-0">Sign Up for our email list</h3>
+            <h3 className="m-0">Contact us</h3>
           </div>
         </div>
       </div>

@@ -111,7 +111,7 @@ const HeroNew = ({
                         color="primary"
                         wideMobile
                         wide={"100%"}
-                        href="https://cruip.com/"
+                        href="Building.html"
                       >
                         View Demo
                       </Button>

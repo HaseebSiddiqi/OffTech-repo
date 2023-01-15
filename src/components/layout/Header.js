@@ -148,7 +148,7 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}
                   >
-                    <li>
+                    {/* <li>
                       <Link
                         activeClass="active"
                         spy={true}
@@ -159,9 +159,14 @@ const Header = ({
                       >
                         Home
                       </Link>
-                    </li>
+                    </li> */}
                     <li>
-                      <Link activeClass="active" onclick={scrollToSection}>
+                      <Link activeClass="active" 
+                        spy={true}
+                        smooth={true}
+                        offset={50}
+                        duration={500}
+                        onClick={() => handleClick(1000)}>
                         About Us
                       </Link>
                     </li>
@@ -172,7 +177,7 @@ const Header = ({
                         smooth={true}
                         offset={50}
                         duration={500}
-                        onClick={() => handleClick(500)}
+                        onClick={() => handleClick(1500)}
                       >
                         Contact
                       </Link>
