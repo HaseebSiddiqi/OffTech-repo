@@ -87,7 +87,8 @@ const HeroNew = ({
                 >
                   <div>
                     <div className="text-xxs text-color-primary fw-300 tt-u mb-8">
-                      Learn while playing games
+                      OFFLINE ELEARNING APPLICATION 
+                      
                     </div>
                     <h3
                       className="mt-0 mb-12"

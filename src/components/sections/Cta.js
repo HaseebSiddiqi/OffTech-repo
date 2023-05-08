@@ -4,7 +4,46 @@ import classNames from "classnames";
 import { SectionProps } from "../../utils/SectionProps";
 import { Element } from "react-scroll";
 import Input from "../elements/Input";
+import emailjs from "emailjs-com";
 
+
+const script = document.createElement('script');
+script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+document.head.appendChild(script);
+
+// initialize the emailjs library with your public key
+(function() {
+  emailjs.init('nasK5bGKgqXeQJfbK');
+})();
+
+function sendMail() {
+  var params = {
+  name: document.getElementById("name").value,
+  email: document.getElementById("email").value,
+  message: document.getElementById("message").value,
+  };
+
+  const serviceID = "service_7svivzp";
+  const templateID = "template_1gb8jgb";
+  
+  emailjs.send(serviceID, templateID, params)
+  .then((res) => {
+  document.getElementById("name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("message").value = "";
+  
+  console.log(res);
+  alert("your message sent successfully");
+  
+  })
+  .catch((err) => console.log(err));
+
+
+
+  }
+  
+  
+  
 const propTypes = {
   ...SectionProps.types,
   split: PropTypes.bool,
@@ -45,15 +84,13 @@ const Cta = ({
   return (
     <section {...props} className={outerClasses}>
       <div className="container" id="second" style={{ marginTop: "50px" }}>
+       <form onSubmit={sendMail}>
         <div className={innerClasses} id="cta">
           <div className="cta-action">
             <Input
-              id="newsletter"
-              type="email"
-              label="Subscribe"
-              labelHidden
-              hasIcon="right"
-              placeholder="Write your email"
+              id="message"
+              name="message"
+              placeholder="Write your message"
             >
               <svg width="20" height="12" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -62,11 +99,17 @@ const Cta = ({
                 />
               </svg>
             </Input>
+            <div className="cta-action">
+              <button type="submit" onClick={sendMail} >Submit</button>
+             
+            </div>
           </div>
+         
           <div className="cta-slogan">
             <h3 className="m-0">Contact us</h3>
           </div>
         </div>
+        </form>
       </div>
     </section>
   );
