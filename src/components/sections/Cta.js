@@ -11,39 +11,9 @@ const script = document.createElement('script');
 script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
 document.head.appendChild(script);
 
-// initialize the emailjs library with your public key
-(function() {
-  emailjs.init('nasK5bGKgqXeQJfbK');
-})();
 
-function sendMail() {
-  var params = {
-  name: document.getElementById("name").value,
-  email: document.getElementById("email").value,
-  message: document.getElementById("message").value,
-  };
-
-  const serviceID = "service_7svivzp";
-  const templateID = "template_1gb8jgb";
   
-  emailjs.send(serviceID, templateID, params)
-  .then((res) => {
-  document.getElementById("name").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("message").value = "";
-  
-  console.log(res);
-  alert("your message sent successfully");
-  
-  })
-  .catch((err) => console.log(err));
-
-
-
-  }
-  
-  
-  
+ 
 const propTypes = {
   ...SectionProps.types,
   split: PropTypes.bool,
@@ -84,32 +54,15 @@ const Cta = ({
   return (
     <section {...props} className={outerClasses}>
       <div className="container" id="second" style={{ marginTop: "50px" }}>
-       <form onSubmit={sendMail}>
+       
         <div className={innerClasses} id="cta">
-          <div className="cta-action">
-            <Input
-              id="message"
-              name="message"
-              placeholder="Write your message"
-            >
-              <svg width="20" height="12" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M9 5H1c-.6 0-1 .4-1 1s.4 1 1 1h8v5l7-6-7-6v5z"
-                  fill="#376DF9"
-                />
-              </svg>
-            </Input>
-            <div className="cta-action">
-              <button type="submit" onClick={sendMail} >Submit</button>
-             
-            </div>
-          </div>
-         
+        
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScC_0xJZSQx59rQNoqcD-i48BBEdx0aVWRGrdBM3hTIfpdwUA/viewform?embedded=true" width="640" height="200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
           <div className="cta-slogan">
             <h3 className="m-0">Contact us</h3>
           </div>
         </div>
-        </form>
+       
       </div>
     </section>
   );
