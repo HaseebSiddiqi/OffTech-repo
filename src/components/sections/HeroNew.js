@@ -112,7 +112,7 @@ const HeroNew = ({
                         color="primary"
                         wideMobile
                         wide={"100%"}
-                        href="Building.html"
+                        href="https://www.figma.com/proto/MOdIwq127smmAsS9NaHELv/Wireframing-in-Figma?type=design&node-id=128-28&scaling=scale-down&page-id=0%3A1&starting-point-node-id=110%3A9"
                       >
                         View Demo
                       </Button>
