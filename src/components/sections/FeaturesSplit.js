@@ -68,11 +68,7 @@ const FeaturesSplit = ({
                 style={{ marginTop: "0px !important" }}
                 data-reveal-container=".split-item"
               >
-                <Image
-                  src="/dmz.svg"
-                  alt="Features split 01"
-                  style={{ maxWidth: "150px", height: "300px", margin: 0 }}
-                />
+             
               </div>
               <div
                 className={classNames(
@@ -81,11 +77,7 @@ const FeaturesSplit = ({
                 style={{ marginTop: "0px !important" }}
                 data-reveal-container=".split-item"
               >
-                <Image
-                  src="/brilliant.png"
-                  alt="Features split 01"
-                  style={{ maxWidth: "300px", margin: 0 }}
-                />
+             
               </div>
             </div>
           </div>

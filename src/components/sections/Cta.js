@@ -3,9 +3,8 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { SectionProps } from "../../utils/SectionProps";
 import { Element } from "react-scroll";
-import Input from "../elements/Input";
-import emailjs from "emailjs-com";
 
+import Image from "../elements/Image";
 
 const script = document.createElement('script');
 script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
@@ -64,8 +63,32 @@ const Cta = ({
         </div>
        
       </div>
+    
+      <div className="container" id="second" style={{ marginTop: "0px !important", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", justifyItems: "center", alignItems: "center" }}>
+  <div>
+    <Image
+      src="/dmz.svg"
+      alt="Features split 01"
+      style={{ maxWidth: "150px", height: "300px", margin: 0 }}
+    />
+  </div>
+  <div>
+    <Image
+      src="/brilliant.png"
+      alt="Features split 01"
+      style={{ maxWidth: "300px", margin: 100 }}
+    />
+  </div>
+</div>
+
+
+
+
+                  
     </section>
   );
+  
+  
 };
 
 Cta.propTypes = propTypes;
